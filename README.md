@@ -4,16 +4,18 @@ Stop wasting time scraping through forums and old StackOverflow posts. If you're
 
 I put this together so no one else has to struggle with the "DLL load failed" or "Device not found" errors that usually plague this process.
 
-## ⚠️ The Golden Rule: Use Python 3.10.0
+## ⚠️ The Golden Rule: Python 3.10.0 ONLY
 
-Before you do anything else, you **must** have Python 3.10.0 installed and set as your **global default** in your Windows Environment Variables.
+Before you do anything else, you **must** have **Python 3.10.0** installed.
+Not 3.10.11, not 3.11, and definitely not 3.12.
+**Only Python 3.10.0 works.**
+
+You must set this specific version as your **global default** in your Windows Environment Variables.
 
 **Why?**
-TensorFlow 2.10 was the last version to support GPU natively on Windows. It doesn't play nice with newer Python versions. While PyTorch is great and supports the latest Python, if you want a single environment where you can use **both** libraries (which is pretty common for deep learning projects), **Python 3.10 is the mandatory bridge**.
+TensorFlow 2.10 was the last version to support GPU natively on Windows. It is extremely picky. While PyTorch is more flexible, if you want a single environment where you can use **both** libraries (which is pretty common for deep learning projects), **Python 3.10.0 is the strict requirement**.
 
-If you use Python 3.11 or 3.12, you might get PyTorch working, but TensorFlow will likely fail to see your GPU or just crash.
-
-### � STOP: Check Your Version First!
+### 🛑 STOP: Check Your Version First!
 
 Don't guess. Open your terminal (Command Prompt or PowerShell) right now and type:
 
@@ -21,12 +23,15 @@ Don't guess. Open your terminal (Command Prompt or PowerShell) right now and typ
 python --version
 ```
 
-If the output is not `Python 3.10.x` (e.g., `3.10.0` or `3.10.11`), **DO NOT PROCEED**.
-You need to go fix your Windows Environment Variables (Path) so that Python 3.10 is the one your system uses.
+If the output is not exactly:
+`Python 3.10.0`
+**DO NOT PROCEED**.
+
+You need to uninstall other versions or fix your Windows Environment Variables (Path) so that Python 3.10.0 is the one your system uses.
 
 ## 🚀 Setup Instructions
 
-Once you've confirmed `python --version` says 3.10, run these commands in your terminal to get everything installed (these specific versions are tested and verified to work together):
+Once you've confirmed `python --version` says exactly `3.10.0`, run these commands in your terminal to get everything installed (these specific versions are tested and verified to work together):
 
 ```bash
 # 1. Update pip just in case
