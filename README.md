@@ -53,7 +53,7 @@ When you create a new environment (e.g., `python -m venv myenv`), it starts **em
 
 If you skip this, your project will not detect the GPU, because the libraries live in the global space, not inside your new isolated environment.
 
-## 🧪 Verify Your Setup
+## 🧪 Verify Your Setup.
 
 I've included two scripts in this repo to make sure everything is actually using your GPU.
 
