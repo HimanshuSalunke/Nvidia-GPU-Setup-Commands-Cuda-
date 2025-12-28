@@ -31,7 +31,7 @@ You need to uninstall other versions or fix your Windows Environment Variables (
 
 ## 🚀 Setup Instructions
 
-I have prepared a separate file with all the necessary installation commands.
+I have prepared a separate file with all the necessary installation commands. Even the **CUDA installation** is handled within these commands (via strict versioning and included binaries), so you don't need to manually hunt for drivers.
 
 **👉 Open [Setup Commands.txt](Setup%20Commands.txt) and run the commands listed there.**
 
@@ -39,7 +39,7 @@ These commands cover:
 1.  Upgrading pip.
 2.  Installing key dependencies (NumPy).
 3.  Installing the specific TensorFlow version (2.10.1) that supports GPU on Windows.
-4.  Installing the compatible PyTorch version (with CUDA 11.7 support).
+4.  Installing the compatible PyTorch version (includes CUDA 11.7 binaries).
 
 ## 🧪 Verify Your Setup
 
