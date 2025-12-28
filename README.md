@@ -31,21 +31,15 @@ You need to uninstall other versions or fix your Windows Environment Variables (
 
 ## 🚀 Setup Instructions
 
-Once you've confirmed `python --version` says exactly `3.10.0`, run these commands in your terminal to get everything installed (these specific versions are tested and verified to work together):
+I have prepared a separate file with all the necessary installation commands.
 
-```bash
-# 1. Update pip just in case
-python -m pip install --upgrade pip
+**👉 Open [Setup Commands.txt](Setup%20Commands.txt) and run the commands listed there.**
 
-# 2. Install generic dependencies
-pip install numpy==1.24.4
-
-# 3. Install TensorFlow (The specific version that works on Windows)
-pip install tensorflow==2.10.1 keras==2.10.0 h5py==3.7.0 protobuf==3.19.6
-
-# 4. Install PyTorch (CUDA 11.7 compatible)
-pip install --user torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
-```
+These commands cover:
+1.  Upgrading pip.
+2.  Installing key dependencies (NumPy).
+3.  Installing the specific TensorFlow version (2.10.1) that supports GPU on Windows.
+4.  Installing the compatible PyTorch version (with CUDA 11.7 support).
 
 ## 🧪 Verify Your Setup
 
